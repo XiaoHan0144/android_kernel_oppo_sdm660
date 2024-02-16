@@ -108,8 +108,9 @@ int dcim_delete_uevent(struct dentry *dentry)
 	}
 
 free_memory:
-    for(i--; i > 0; i--)
+    for(i--; i > 0; i--){
         kfree(denied_param[i]);
+	}
 
 	kfree(buf);
 

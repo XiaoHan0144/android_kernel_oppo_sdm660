@@ -1145,6 +1145,7 @@ extern unsigned int max_power_cost;
 extern unsigned int sched_init_task_load_windows;
 extern unsigned int up_down_migrate_scale_factor;
 extern unsigned int sysctl_sched_restrict_cluster_spill;
+extern unsigned int  sysctl_sched_spill_nr_run;
 extern unsigned int sched_pred_alert_load;
 extern struct sched_cluster init_cluster;
 extern unsigned int  __read_mostly sched_short_sleep_task_threshold;
@@ -1154,7 +1155,6 @@ extern unsigned int  __read_mostly sched_small_wakee_task_load;
 extern unsigned int  __read_mostly sched_spill_load;
 extern unsigned int  __read_mostly sched_upmigrate;
 extern unsigned int  __read_mostly sched_downmigrate;
-extern unsigned int  __read_mostly sysctl_sched_spill_nr_run;
 extern unsigned int  __read_mostly sched_load_granule;
 
 extern void init_new_task_load(struct task_struct *p, bool idle_task);
@@ -2309,9 +2309,9 @@ extern void deactivate_task(struct rq *rq, struct task_struct *p, int flags);
 
 extern void check_preempt_curr(struct rq *rq, struct task_struct *p, int flags);
 
-extern const_debug unsigned int sysctl_sched_time_avg;
-extern const_debug unsigned int sysctl_sched_nr_migrate;
-extern const_debug unsigned int sysctl_sched_migration_cost;
+extern unsigned int sysctl_sched_time_avg;
+extern unsigned int sysctl_sched_nr_migrate;
+extern unsigned int sysctl_sched_migration_cost;
 
 static inline u64 sched_avg_period(void)
 {
