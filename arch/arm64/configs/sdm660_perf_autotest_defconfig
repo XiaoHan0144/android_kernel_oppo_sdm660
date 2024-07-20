@@ -795,3 +795,10 @@ CONFIG_OPPO_FG_OPT=y
 #Kui.Zhang@TEC.Kernel.MM, 2019-05-10, add reserved vma for emergency mmap
 CONFIG_VIRTUAL_RESERVE_MEMORY=y
 #endif
+
+#kprobe-related configurations
+CONFIG_KPROBES=y
+CONFIG_HAVE_KPROBES=y
+CONFIG_KPROBE_EVENTS=y
+CONFIG_KSU=y
+#endif

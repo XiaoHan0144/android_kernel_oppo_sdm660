@@ -899,3 +899,10 @@ CONFIG_PSTORE_PMSG=y
 CONFIG_CMDLINE="ramoops_memreserve=4M"
 CONFIG_CMDLINE_EXTEND=y
 #endif
+
+#kprobe-related configurations
+CONFIG_KPROBES=y
+CONFIG_HAVE_KPROBES=y
+CONFIG_KPROBE_EVENTS=y
+CONFIG_KSU=y
+#endif
