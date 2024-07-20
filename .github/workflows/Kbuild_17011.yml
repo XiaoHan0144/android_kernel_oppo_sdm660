@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Set SWAP to 5GiB
+      - name: Set SWAP to 10GiB
         uses: pierotofy/set-swap-space@master
         with:
-          swap-size-gb: 5
+          swap-size-gb: 10
 
       - name: Initialize compilation environment
         run: |
